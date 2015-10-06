@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Paletka : MonoBehaviour
 {
-    //maksymalne wychylenie paletki 
+    //maksymalne wychylenie paletki - 3.5 to dobra wartosc, sprawdzalem, ustawic w edytorze :D
     public float wychylenie;
 	void OnCollisionEnter(Collision kolizja)
 	{

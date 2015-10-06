@@ -32,7 +32,7 @@ public class Pilka : MonoBehaviour {
 
 		ileOdbic =0;
 		PozycjaGracza = 1;
-		los = Random.Range (0, 2) == 0 ? -1 : 1; // jeżeli == 0 to -1 inaczej 1 
+		los = Random.Range (0, 2) == 0 ? -1 : 1; 
 		los2 = Random.Range (0, 2) == 0 ? -1 : 1;
 
 
@@ -42,7 +42,7 @@ public class Pilka : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		if (transform.position.z < (-12.5)) {   //wylecenie pilki poza plansze/paletke
+		if (transform.position.z < (-12.5)) {
 			GameObject.Find("Text").GetComponent<Wynik>().ZwiekszWynik(1);
 			transform.position = Vector3.zero;
 			Start ();
