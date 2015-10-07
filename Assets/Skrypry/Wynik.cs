@@ -22,6 +22,12 @@ public class Wynik : MonoBehaviour {
 			WynikPrzeciwnika ++;
 			GetComponent<TextMesh>().text = ("Gracz: "+ WynikGracza.ToString() + " Przeciw: "+WynikPrzeciwnika.ToString());
 		}
+		if (WynikPrzeciwnika > 9) {
+			Application.LoadLevel(2);
+		}
+		if(WynikGracza>9){
+			Application.LoadLevel (3);
+		}
 	}
 
 

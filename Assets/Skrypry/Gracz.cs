@@ -7,7 +7,15 @@ public class Gracz : MonoBehaviour {
 	void Start () {
 	
 	}
-	
+	void OnCollisionEnter(Collision kolizja)
+	{
+		if (kolizja.gameObject.name == "Sphere")
+		{
+			GetComponent<AudioSource>().Play();
+		}
+		
+		
+	}
 	// Update is called once per frame
 	void Update () {
 		Ray ray = Camera.main.ScreenPointToRay (Input.mousePosition);

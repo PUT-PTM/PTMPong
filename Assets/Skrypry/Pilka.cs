@@ -8,6 +8,26 @@ public class Pilka : MonoBehaviour {
 	public Collision odbicie;
 	// Use this for initialization
 	public Rigidbody rb;
+
+	void OnCollisionEnter(Collision kolizja)
+	{
+		if (kolizja.gameObject.name == "Przeciwnik")
+		{
+			
+			rb.AddForce(new Vector3(0f,0f,ileOdbic));
+			ileOdbic++;
+			print(ileOdbic);
+			
+		}
+		else if (kolizja.gameObject.name == "Gracz")
+		{
+			rb.AddForce(new Vector3(0, 0, -(ileOdbic)));
+			ileOdbic++;
+			
+			print(ileOdbic);
+		}
+		
+	}
 	void Start () {
 
 		ileOdbic =0;
